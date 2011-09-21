@@ -6,5 +6,6 @@ commands:
         description: Pokes a player!
         usage: /<command> [player]
         Example: /pokeme TheRandomGuy10
+        alias: [poke]
 authors: [GitHub Users, TehRandomGuy]
 website: https://github.com/TehRandomGuy/Community-Plugin
