@@ -1,0 +1,10 @@
+name: Community
+main: com.tehrandomguy.Community
+description: For the community.
+commands:
+    pokeme:
+        description: Pokes a player!
+        usage: /<command> [player]
+        Example: /pokeme TheRandomGuy10
+authors: [GitHub Users, TehRandomGuy]
+website: https://github.com/TehRandomGuy/Community-Plugin
