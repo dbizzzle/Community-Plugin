@@ -19,7 +19,7 @@ public class Commands implements CommandExecutor{
 				Bukkit.getServer().getPlayer(args[0]).chat("Ouch!");
 				return false;
 			} catch(ArrayIndexOutOfBoundsException e){
-				s.sendMessage(ChatColor.RED + "Use /pokeme <player>");
+				sender.sendMessage(ChatColor.RED + "Use /pokeme <player>");
 				return false;
 			}
 		}
@@ -30,13 +30,11 @@ public class Commands implements CommandExecutor{
 			if (args.length == 0) {
 				s.sendMessage(ChatColor.RED + "Please select a player to slap.");
 			} else if (args.length > 0) {
-				Player slapped = getServer().getPlayer(args[0]);
-				String slap = slapped.getDisplayName();
+				Player slapped = Bukkit.getServer().getPlayer(args[0]);
 				slapped.damage(3);
 				slapped.sendMessage(ChatColor.BLUE + se + " slapped you! Whatcha gonna do about it!?");
-				slapped.sendMessage(ChatColor.BLUE + "Slap them back with: /slap <player>"
+				slapped.sendMessage(ChatColor.BLUE + "Slap them back with: /slap <player>");
 				slapped.chat("Ouch!");
-				//hehe couldn't come up with any other commands without my ide on this computer
 			}
 		}
 		return false;
