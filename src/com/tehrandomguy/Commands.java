@@ -28,12 +28,18 @@ public class Commands implements CommandExecutor{
 			Player s = (Player) sender;
 			String se = s.getDisplayName();
 			if (args.length == 0) {
-				s.sendMessage(ChatColor.RED + "Please select a player to slap.");
+				s.sendMessage(ChatColor.RED + "Proper Usage:");
+				s.sendMessage(ChatColor.RED + "/slap <player>");
 			} else if (args.length > 0) {
 				Player slapped = Bukkit.getServer().getPlayer(args[0]);
+				String slap = slapped.getDisplayName();
 				slapped.damage(3);
-				slapped.sendMessage(ChatColor.BLUE + se + " slapped you! Whatcha gonna do about it!?");
+				slapped.sendMessage(ChatColor.GOLD + se + ChatColor.BLUE + 
+				        " slapped you! Whatcha gonna do about it!?");
 				slapped.sendMessage(ChatColor.BLUE + "Slap them back with: /slap <player>");
+				s.sendMessage(ChatColor.BLUE + "You have slapped " + ChatColor.GOLD + slap + 
+				        ChatColor. BLUE +"!");
+				s.sendMessage(ChatColor.BLUE + "Better watch out they don't slap back!");
 				slapped.chat("Ouch!");
 			}
 		}
