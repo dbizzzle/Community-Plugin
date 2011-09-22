@@ -2,6 +2,8 @@ package com.tehrandomguy;
 
 import java.util.logging.Logger;
 
+import org.bukkit.event.Event;
+import org.bukkit.event.Event.Priority;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -13,6 +15,7 @@ public class Community extends JavaPlugin{
 	public void onEnable(){
 		// Register events
 		PluginManager PM = getServer().getPluginManager();
+		PM.registerEvent(Event.Type.PLAYER_PORTAL, new PlayerListen(this), Priority.Normal, this);
 		// Output to log
 		log.info(prefix + "Community now enabled!");
 	}
