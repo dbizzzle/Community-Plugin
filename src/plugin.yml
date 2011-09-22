@@ -7,5 +7,9 @@ commands:
         usage: /<command> [player]
         Example: /pokeme TheRandomGuy10
         alias: [poke]
-authors: [GitHub Users, TehRandomGuy]
+    slap:
+        Description: Slap a player.
+        Usage: |
+            /slap <player>
+authors: [GitHub Users, TehRandomGuy, dbizzzle]
 website: https://github.com/TehRandomGuy/Community-Plugin
